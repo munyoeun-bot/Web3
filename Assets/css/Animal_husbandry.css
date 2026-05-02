@@ -1,0 +1,329 @@
+
+/* ================= slider ================= */
+.slider{
+  position:relative;
+  height:75vh;
+  margin:20px;
+  overflow:hidden;
+  border-radius:18px;
+  box-shadow:0 20px 50px rgba(0,0,0,0.4);
+}
+
+.slides{
+  display:flex;
+  height:100%;
+  transition:transform 0.7s ease;
+}
+
+.slide{
+  min-width:100%;
+  position:relative;
+}
+
+.slide img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+
+/* DARK OVERLAY */
+.overlay{
+  position:absolute;
+  inset:0;
+  background:linear-gradient(120deg, rgba(0,0,0,0.7), rgba(0,0,0,0.2));
+}
+
+/* ================= NAV2 (TOP RIGHT MENU) ================= */
+.nav2{
+  position:absolute;
+  top:15px;
+  right:15px;
+
+  display:flex;
+  gap:10px;
+
+  background:rgba(0,0,0,0.35);
+  padding:8px 12px;
+  border-radius:12px;
+  backdrop-filter:blur(10px);
+}
+
+.nav2 button{
+  background:#d4af37;
+  border:none;
+  padding:6px 10px;
+  border-radius:8px;
+  font-weight:600;
+  cursor:pointer;
+  transition:0.3s;
+}
+
+.nav2 button:hover{
+  background:white;
+  color:black;
+}
+
+/* ================= BADGE ================= */
+.badge{
+  position:absolute;
+  top:15px;
+  left:15px;
+  background:#16a34a;
+  color:white;
+  padding:5px 10px;
+  font-size:12px;
+  border-radius:20px;
+  animation:float 3s infinite ease-in-out;
+}
+
+@keyframes float{
+  0%,100%{transform:translateY(0);}
+  50%{transform:translateY(-5px);}
+}
+
+/* ================= TEXT BOX ================= */
+.content{
+  position:absolute;
+  top:50%;
+  left:70px;
+  transform:translateY(-50%);
+  max-width:420px;
+
+  background:rgba(0,0,0,0.35);
+  backdrop-filter:blur(10px);
+  padding:20px;
+  border-left:4px solid #d4af37;
+  border-radius:14px;
+  color:white;
+}
+
+.content h2{
+  font-size:28px;
+  margin:0 0 10px;
+  background:linear-gradient(90deg,#fff,#d4af37);
+  -webkit-background-clip:text;
+  background-clip:text;
+  -webkit-text-fill-color:transparent;
+}
+
+.content p{
+  font-size:15px;
+  color:#e5e7eb;
+}
+
+/* ================= NAV BUTTONS ================= */
+.nav{
+  position:absolute;
+  top:50%;
+  transform:translateY(-50%);
+  background:rgba(0,0,0,0.4);
+  border:none;
+  color:white;
+  font-size:24px;
+  padding:10px;
+  border-radius:50%;
+  cursor:pointer;
+}
+
+.nav:hover{
+  background:#d4af37;
+  color:black;
+}
+
+.prev{left:15px;}
+.next{right:15px;}
+
+/* ================= DOTS ================= */
+.dots{
+  position:absolute;
+  bottom:15px;
+  width:100%;
+  text-align:center;
+}
+
+.dots span{
+  width:9px;
+  height:9px;
+  margin:5px;
+  display:inline-block;
+  background:white;
+  opacity:0.4;
+  border-radius:50%;
+  cursor:pointer;
+}
+
+.dots .active{
+  background:#d4af37;
+  opacity:1;
+}
+
+/* MOBILE */
+@media(max-width:768px){
+  .slider{height:60vh;}
+
+  .content{
+    left:20px;
+    max-width:260px;
+  }
+
+  .content h2{font-size:20px;}
+  .content p{font-size:13px;}
+}
+/*content1*/
+body{
+    margin:0;
+    font-family:"Kantumruy Pro", sans-serif;
+    background:#f0fdf4;
+    color:#0f172a;
+}
+
+/* =======================
+   HEADER STYLE
+======================= */
+.header-vet{
+    text-align:center;
+    padding:70px 20px;
+    background: linear-gradient(135deg,#22c55e,#16a34a);
+    color:white;
+}
+
+.header-vet h1{
+    font-size:40px;
+    margin-bottom:10px;
+}
+
+.header-vet p{
+    font-size:18px;
+    opacity:0.9;
+}
+
+/* =======================
+   SECTION 3 (BASIC)
+======================= */
+.section3{
+    padding:70px 10%;
+}
+
+.title3{
+    text-align:center;
+    font-size:34px;
+    color:#16a34a;
+    margin-bottom:40px;
+}
+
+.grid3{
+    display:grid;
+    grid-template-columns: repeat(3,1fr);
+    gap:20px;
+}
+
+.card3{
+    background:white;
+    border-radius:15px;
+    padding:20px;
+    box-shadow:0 8px 20px rgba(0,0,0,0.08);
+    transition:0.4s;
+    border-left:5px solid #22c55e;
+}
+
+.card3:hover{
+    transform:translateY(-8px);
+}
+
+.card3 h3{
+    color:#16a34a;
+    margin-bottom:10px;
+}
+
+.card3 p{
+    font-size:14px;
+    line-height:1.6;
+    color:#334155;
+}
+
+/* =======================
+   SECTION 4 (ADVANCED)
+======================= */
+.section4{
+    padding:70px 10%;
+    background:#ecfdf5;
+}
+
+.title4{
+    text-align:center;
+    font-size:34px;
+    color:#065f46;
+    margin-bottom:40px;
+}
+
+/* GRID */
+.grid4{
+    display:grid;
+    grid-template-columns: repeat(3,1fr);
+    gap:25px;
+}
+
+/* CARD */
+.card4{
+    background:white;
+    border-radius:16px;
+    overflow:hidden;
+    box-shadow:0 10px 25px rgba(0,0,0,0.08);
+    transition:0.4s;
+}
+
+.card4:hover{
+    transform:scale(1.03);
+}
+
+/* IMAGE */
+.card4 img{
+    width:100%;
+    height:200px;
+    object-fit:cover;
+}
+
+/* CONTENT */
+.content4{
+    padding:15px;
+}
+
+.content4 h3{
+    color:#16a34a;
+    margin-bottom:8px;
+}
+
+.content4 p{
+    font-size:14px;
+    color:#475569;
+    line-height:1.6;
+}
+
+/* ANIMATION */
+.card3, .card4{
+    animation:fadeUp 1s ease;
+}
+
+@keyframes fadeUp{
+    from{opacity:0; transform:translateY(30px);}
+    to{opacity:1; transform:translateY(0);}
+}
+
+/* =======================
+   RESPONSIVE
+======================= */
+@media(max-width:900px){
+    .grid3,.grid4{
+        grid-template-columns:1fr 1fr;
+    }
+}
+
+@media(max-width:600px){
+    .grid3,.grid4{
+        grid-template-columns:1fr;
+    }
+
+    .header-vet h1{
+        font-size:28px;
+    }
+}

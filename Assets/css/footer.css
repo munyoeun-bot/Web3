@@ -1,0 +1,110 @@
+:root{
+  --primary:#16a34a;
+  --gold:#d4af37;
+  --bg:#f8fafc;
+}
+
+/* 🌙 background with modern look */
+.school-footer {
+  /* background: linear-gradient(135deg, #0f172a, #0dda2c); */
+  background-color: rgb(244, 245, 244);
+  color: rgb(0, 0, 0);
+  margin-top: 60px;
+  backdrop-filter: blur(10px);
+}
+
+/* GRID */
+.footer-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 25px;
+  padding: 50px;
+}
+
+/* BOX STYLE (glass effect) */
+.footer-box {
+  padding: 15px;
+  border-radius: 12px;
+  background: white;
+  transition: 0.3s;
+}
+
+.footer-box:hover {
+  transform: translateY(-5px);
+  background: rgba(255,255,255,0.06);
+}
+
+/* TITLES */
+.footer-box h2,
+.footer-box h3 {
+  color: #22c55e;
+  margin-bottom: 10px;
+}
+
+/* LINKS */
+.footer-box a {
+  display: block;
+  color: #000000;
+  text-decoration: none;
+  margin: 6px 0;
+  transition: 0.3s;
+}
+
+.footer-box a:hover {
+  color: #22c55e;
+  transform: translateX(5px);
+}
+
+/* SOCIAL */
+.social a {
+  display: block;
+  margin: 5px 0;
+  color: #38bdf8;
+  transition: 0.3s;
+}
+
+.social a:hover {
+  color: #22c55e;
+}
+
+/* MAP */
+.map iframe {
+  width: 100%;
+  height: 180px;
+  border-radius: 10px;
+  border: none;
+}
+
+/* BOTTOM BAR */
+.footer-bottom {
+  text-align: center;
+  padding: 15px;
+  background: var(--primary);
+  font-size: 14px;
+  color: white;
+}
+
+/* 📱 TABLET */
+@media (max-width: 992px) {
+  .footer-container {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 30px;
+  }
+}
+
+/* 📱 MOBILE */
+@media (max-width: 600px) {
+  .footer-container {
+    grid-template-columns: 1fr;
+    text-align: center;
+    padding: 20px;
+  }
+
+  .footer-box {
+    text-align: center;
+  }
+}
+/*​dark mode */
+body.dark .footer-container{
+ background-color:var(--primary); 
+}

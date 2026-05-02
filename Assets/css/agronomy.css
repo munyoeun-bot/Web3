@@ -1,0 +1,232 @@
+body{
+    margin:0;
+    font-family:"Kantumruy Pro", sans-serif;
+    background:#f7fee7;
+    color:#1f2937;
+}
+
+/* HERO */
+.hero{
+  width:100%;
+  height:500px;   /* 1920 x 500 */
+  position:relative;
+  overflow:hidden;
+}
+
+/* IMAGE */
+.hero img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  position:absolute;
+  top:0;
+  left:0;
+}
+
+/* OVERLAY */
+.hero::after{
+  content:"";
+  position:absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  background:rgba(0,0,0,0.45);
+}
+
+/* CONTENT */
+.hero-content{
+  position:relative;
+  z-index:2;
+  height:100%;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  color:white;
+  padding:0 20px;
+  animation:fadeUp 1s ease;
+}
+
+.hero-content h1{
+  font-size:42px;
+  margin-bottom:12px;
+}
+
+.hero-content p{
+  font-size:16px;
+  max-width:650px;
+  line-height:1.6;
+  margin-bottom:18px;
+}
+
+/* BUTTON */
+.hero-content button{
+  padding:12px 24px;
+  border:none;
+  border-radius:8px;
+  background:#16a34a;
+  color:white;
+  font-size:15px;
+  cursor:pointer;
+  transition:0.3s;
+}
+
+.hero-content button:hover{
+  background:#22c55e;
+  transform:translateY(-3px);
+}
+
+/* ANIMATION */
+@keyframes fadeUp{
+  from{
+    opacity:0;
+    transform:translateY(25px);
+  }
+  to{
+    opacity:1;
+    transform:translateY(0);
+  }
+}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+  .hero{
+    height:350px;
+  }
+
+  .hero-content h1{
+    font-size:24px;
+  }
+
+  .hero-content p{
+    font-size:13px;
+  }
+}
+
+
+/* ================= SECTION 3 (element3) ================= */
+.section3{
+    padding:70px 10%;
+}
+
+.title3{
+    text-align:center;
+    font-size:34px;
+    color:#166534;
+    margin-bottom:40px;
+}
+
+.grid3{
+    display:grid;
+    grid-template-columns: repeat(3,1fr);
+    gap:20px;
+}
+
+.card3{
+    background:white;
+    border-radius:15px;
+    padding:20px;
+    box-shadow:0 10px 25px rgba(0,0,0,0.05);
+    border-bottom:4px solid #22c55e;
+    transition:0.4s;
+}
+
+.card3:hover{
+    transform:translateY(-8px);
+    background:#ecfdf5;
+}
+
+.card3 h3{
+    color:#15803d;
+    margin-bottom:10px;
+}
+
+.card3 p{
+    font-size:14px;
+    color:#475569;
+    line-height:1.6;
+}
+
+/* ================= SECTION 4 (element4) ================= */
+.section4{
+    padding:70px 10%;
+    background:#dcfce7;
+}
+
+.title4{
+    text-align:center;
+    font-size:34px;
+    color:#14532d;
+    margin-bottom:40px;
+}
+
+.grid4{
+    display:grid;
+    grid-template-columns: repeat(3,1fr);
+    gap:25px;
+}
+
+/* CARD */
+.card4{
+    background:white;
+    border-radius:16px;
+    overflow:hidden;
+    box-shadow:0 10px 25px rgba(0,0,0,0.08);
+    transition:0.4s;
+}
+
+.card4:hover{
+    transform:scale(1.04);
+}
+
+/* IMAGE */
+.card4 img{
+    width:100%;
+    height:190px;
+    object-fit:cover;
+}
+
+/* CONTENT */
+.content4{
+    padding:15px;
+}
+
+.content4 h3{
+    color:#16a34a;
+    margin-bottom:8px;
+}
+
+.content4 p{
+    font-size:14px;
+    color:#475569;
+    line-height:1.6;
+}
+
+/* ================= ANIMATION ================= */
+.card3, .card4{
+    animation:fadeUp 1s ease;
+}
+
+@keyframes fadeUp{
+    from{opacity:0; transform:translateY(30px);}
+    to{opacity:1; transform:translateY(0);}
+}
+
+/* ================= RESPONSIVE ================= */
+@media(max-width:900px){
+    .grid3,.grid4{
+        grid-template-columns:1fr 1fr;
+    }
+}
+
+@media(max-width:600px){
+    .grid3,.grid4{
+        grid-template-columns:1fr;
+    }
+
+    .hero-agri h1{
+        font-size:28px;
+    }
+}

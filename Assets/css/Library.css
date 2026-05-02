@@ -1,0 +1,161 @@
+body{
+    margin:0;
+    font-family:"Kantumruy Pro", sans-serif;
+    background:#f8fafc;
+    color:#0f172a;
+}
+
+/* HERO */
+.hero-lib{
+    text-align:center;
+    padding:80px 20px;
+    background:linear-gradient(135deg,#16a34a,#22c55e);
+    color:white;
+}
+
+.hero-lib h1{
+    font-size:40px;
+}
+
+.hero-lib p{
+    opacity:0.9;
+}
+
+/* ================= SECTION 3 ================= */
+.section3{
+    padding:70px 10%;
+}
+
+.title3{
+    text-align:center;
+    font-size:32px;
+    margin-bottom:40px;
+    color:#166534;
+}
+
+/* INFO GRID */
+.grid3{
+    display:grid;
+    grid-template-columns: repeat(3,1fr);
+    gap:20px;
+}
+
+/* INFO BOX */
+.box3{
+    background:white;
+    padding:25px;
+    border-radius:12px;
+    box-shadow:0 10px 25px rgba(0,0,0,0.05);
+    transition:0.3s;
+}
+
+.box3:hover{
+    transform:translateY(-8px);
+}
+
+.box3 h3{
+    color:#16a34a;
+    margin-bottom:10px;
+}
+
+.box3 p{
+    font-size:14px;
+    color:#475569;
+    line-height:1.6;
+}
+
+/* ================= SECTION 4 ================= */
+.section4{
+    padding:70px 10%;
+    background:#f1f5f9;
+}
+
+.title4{
+    text-align:center;
+    font-size:32px;
+    margin-bottom:40px;
+    color:#14532d;
+}
+
+/* BOOK GRID */
+.grid4{
+    display:grid;
+    grid-template-columns: repeat(4,1fr);
+    gap:20px;
+}
+
+/* BOOK CARD (simple clean style) */
+.book4{
+    background:white;
+    border-radius:12px;
+    overflow:hidden;
+    box-shadow:0 8px 20px rgba(0,0,0,0.06);
+    transition:0.3s;
+}
+
+.book4:hover{
+    transform:translateY(-8px);
+}
+
+.book4 img{
+    width:100%;
+    height:220px;
+    object-fit:cover;
+}
+
+.book-info{
+    padding:15px;
+}
+
+.book-info h4{
+    margin:0;
+    color:#15803d;
+}
+
+.book-info p{
+    font-size:13px;
+    color:#64748b;
+    margin-top:5px;
+}
+
+/* BADGE */
+.badge{
+    display:inline-block;
+    margin-top:8px;
+    padding:4px 10px;
+    font-size:12px;
+    background:#22c55e;
+    color:white;
+    border-radius:20px;
+}
+
+/* ANIMATION */
+.box3, .book4{
+    animation:fadeUp 1s ease;
+}
+
+@keyframes fadeUp{
+    from{opacity:0; transform:translateY(30px);}
+    to{opacity:1; transform:translateY(0);}
+}
+
+/* RESPONSIVE */
+@media(max-width:900px){
+    .grid3{
+        grid-template-columns:1fr;
+    }
+
+    .grid4{
+        grid-template-columns:1fr 1fr;
+    }
+}
+
+@media(max-width:600px){
+    .grid4{
+        grid-template-columns:1fr;
+    }
+
+    .hero-lib h1{
+        font-size:28px;
+    }
+}
